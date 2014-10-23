@@ -7,4 +7,4 @@ if [ ! -d ~/.vk-commits ]; then
 fi
 cd .vk-commits
 git clone https://github.com/fat32nov/vk-commits.git dist
-ln -sv ~/.vk-commits/dist/vk-commits.py /usr/bin/vk-commits
+sudo ln -sv ~/.vk-commits/dist/vk-commits.py /usr/bin/vk-commits
