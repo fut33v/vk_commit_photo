@@ -9,7 +9,7 @@ import vk_common
 
 VK_COMMITS_DIR = '.vk-commits/'
 GIT_POST_COMMIT = ".git/hooks/post-commit"
-
+GIT_GITIGNORE = ".gitignore"
 
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
@@ -109,6 +109,14 @@ def init_vk_commits():
             ".git/hooks/post-commit"
         )
         configs = vk_common.no_configs(VK_COMMITS_DIR + 'configs.json')
+
+    GITIGNORE_TEXT = ".vk-commits\n.lastcommit"
+
+    if os.path.exists(GIT_GITIGNORE):
+        f = open(GIT_GITIGNORE, 'a')
+    else:
+        f = open(GIT_GITIGNORE, 'w')
+    f.write(GITIGNORE_TEXT)
 
 
 def setup_vk_commits():
