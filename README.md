@@ -9,7 +9,7 @@ Posting photos in Vkontakte at commit time (webcam)
 
 or
 
-* `git clone https://github.com/fat32nov/vk-commits.git && cd vk-commits && ./install.sh`
+* `git clone https://github.com/fat32nov/vk-commits.git && cd vk-commits && sudo ./install.sh`
 
 ##Requirements:
 * OS: Linux
