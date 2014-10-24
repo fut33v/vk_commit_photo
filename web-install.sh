@@ -7,7 +7,7 @@ if [ ! -d ~/.vk-commits ]; then
 fi
 
 if [ -d ~/.vk-commits ]; then
-    rm -rf ~/.vk-commits/dist
+    rm -rf ~/.vk-commits/dist &&
     echo ~/.vk-commits/dist directory removed
 fi
 
