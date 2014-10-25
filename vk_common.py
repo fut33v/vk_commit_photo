@@ -90,7 +90,13 @@ def no_configs(configs_filename):
         print "using default client id:", CLIENT_ID
         client_id = CLIENT_ID
 
-    token, user_id = vk_auth.auth(email, password, client_id, "photos")
+    token, user_id = vk_auth.auth(
+        email,
+        password,
+        client_id,
+        "photos,offline"
+    )
+
     configs['album_title'] = album_title
     configs['album_desc'] = album_desc
     configs['client_id'] = client_id
