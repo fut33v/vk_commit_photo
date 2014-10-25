@@ -5,16 +5,12 @@ import json
 import urllib2
 from urllib import urlencode
 import os
-import getpass
 import requests
 from datetime import datetime
 from os.path import expanduser
 
-import vk_auth
 from vk_common import load_configs
-from vk_common import save_configs
 from vk_common import which
-import vk_common
 
 
 API_VERSION = 5.25
@@ -25,8 +21,10 @@ def call_api(method, params, token):
     params.append(("v", API_VERSION))
     url = "https://api.vk.com/method/%s?%s" % (method, urlencode(params))
     response = urllib2.urlopen(url).read()
-    # print response
-    return json.loads(response)["response"]
+    if 'response' in response:
+        return json.loads(response)['response']
+    else:
+        print response
 
 
 def get_albums(user_id, token):
