@@ -1,4 +1,4 @@
-vk-commits
+vk_commit_photo
 ==========
 
 Posting photos in Vkontakte at commit time (webcam)
